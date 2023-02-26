@@ -99,6 +99,20 @@ h6 {
   text-align: center;
 }
 
+table {
+  border: 2px solid black;
+  background-color: beige;
+  table-layout: auto;
+  text-align: center; 
+  margin: 100px;
+}
+th {
+  font-size: 20px;
+}
+th, td {
+  padding: 15px;
+  border: 1px solid black;
+}
 footer {
   color:beige;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
