@@ -10,7 +10,7 @@ function randomCustCount(min, max){
   return Math.floor(Math.random() * (max - min +1) + min);
 }
 
-function StoreLocation (name, min, max, avgCookieSales, custPerHour, cookiePerHour, total){
+function StoreLocation (name, min, max, avgCookieSales, custPerHour, cookiePerHour){
 
   this.name = name;
   this.min = min;
@@ -18,16 +18,16 @@ function StoreLocation (name, min, max, avgCookieSales, custPerHour, cookiePerHo
   this.avgCookieSales = avgCookieSales;
   this.custPerHour = custPerHour;
   this.cookiePerHour = cookiePerHour;
-  this.total = total;
+  // this.total = total;
 
   allStoreSales.push(this);
 }
 
-let seattle = new StoreLocation ('Seattle', 23, 65, 6.3, [], [], 0);
-let tokyo = new StoreLocation ('Tokyo', 3, 4, 1.2, [], [], 0);
-let dubai = new StoreLocation ('Dubai', 11, 28, 3.7, [], [], 0);
-let paris = new StoreLocation ('Paris', 20, 28, 2.3, [], [], 0);
-let lima = new StoreLocation ('Lima', 2, 16, 4.6, [], [], 0);
+let seattle = new StoreLocation ('Seattle', 23, 65, 6.3, [], []);
+let tokyo = new StoreLocation ('Tokyo', 3, 4, 1.2, [], []);
+let dubai = new StoreLocation ('Dubai', 11, 28, 3.7, [], []);
+let paris = new StoreLocation ('Paris', 20, 28, 2.3, [], []);
+let lima = new StoreLocation ('Lima', 2, 16, 4.6, [], []);
 
 
 // seattle.randomCustCount();
@@ -55,7 +55,8 @@ StoreLocation.prototype.cookieCount = function(){
 };
 
 StoreLocation.prototype.calculateTotal = function(){
-  console.log(this.cookiePerHour);
+  // console.log(this.cookiePerHour);
+  this.total = 0;
   for(let i = 0; i < this.cookiePerHour.length; i++){
     this.total += this.cookiePerHour[i];
   }
@@ -72,9 +73,6 @@ tableElem.appendChild(tBodyElem);
 
 StoreLocation.prototype.render = function(){
 
-  let trBodyElem = document.createElement('tr');
-  tBodyElem.appendChild(trBodyElem);
-
   let cityRow = document.createElement('tr');
   tBodyElem.appendChild(cityRow);
 
@@ -85,16 +83,17 @@ StoreLocation.prototype.render = function(){
 
   for(let i = 0; i < hours.length; i++) {
     let trElem = document.createElement('td');
-    trElem.textContent = `${this.cookiePerHour[i]}`;
+    trElem.textContent = this.cookiePerHour[i];
     cityRow.appendChild(trElem);
+    console.log(this.cookiePerHour[i]);
   }
 
   let tdTotalElem = document.createElement('td');
-  tableElem.appendChild(tdTotalElem);
+  cityRow.appendChild(tdTotalElem);
   tdTotalElem.textContent = this.total;
 };
 
-function headerRender() {
+function renderHeader() {
 
   let trHeaderElem = document.createElement('tr');
   headerElem.appendChild(trHeaderElem);
@@ -115,11 +114,11 @@ function headerRender() {
 }
 
 function renderFooter() {
-  let tfootElem = document.createElement('tfoot');
-  tableElem.appendChild(tfootElem);
+  let tFootElem = document.createElement('tfoot');
+  tableElem.appendChild(tFootElem);
 
   let trFooterElem = document.createElement('tr');
-  tfootElem.appendChild(trFooterElem);
+  tFootElem.appendChild(trFooterElem);
 
   let firstCell = document.createElement('td');
   trFooterElem.appendChild(firstCell);
@@ -147,12 +146,8 @@ function renderFooter() {
   lastCell.textContent = grandTotal;
 }
 
-headerRender();
-console.log(seattle.render());
-console.log(tokyo.render());
-console.log(dubai.render());
-console.log(paris.render());
-console.log(lima.render());
+renderHeader();
+
 
 console.log(seattle.custCount());
 console.log(seattle.cookieCount());
@@ -161,23 +156,32 @@ console.log(seattle);
 
 console.log(tokyo.custCount());
 console.log(tokyo.cookieCount());
+console.log(tokyo.calculateTotal());
 console.log(tokyo);
 
 console.log(dubai.custCount());
 console.log(dubai.cookieCount());
+console.log(dubai.calculateTotal());
 console.log(dubai);
 
 console.log(paris.custCount());
 console.log(paris.cookieCount());
+console.log(paris.calculateTotal());
 console.log(paris);
 
 console.log(lima.custCount());
 console.log(lima.cookieCount());
+console.log(lima.calculateTotal());
 console.log(lima);
 
 console.log(allStoreSales);
 console.log(allStoreSales[0].cookiePerHour[0]);
 renderFooter();
+console.log(seattle.render());
+console.log(tokyo.render());
+console.log(dubai.render());
+console.log(paris.render());
+console.log(lima.render());
 
 
 //   sectionElem.appendChild(articleElem);
