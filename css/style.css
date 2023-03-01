@@ -1,17 +1,19 @@
 
 header {
   color:beige;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: olive;
   font-family: 'Mynerve', cursive;
-  font-size: 80px;
-  font-weight: 600;
+  font-size: 120px;
+  font-weight: 800;
   padding: 50px;
   text-align: center;
 }
 
 header h1 {
   font-family: 'Mynerve', cursive;
-  font-size: 100px;
-  font-weight: 900;
+  font-size: 120px;
+  font-weight: 800;
   padding: 10px;
   text-align: center;
 }
@@ -29,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: darkgreen;
+  color: olive;
 }
 
 body {
@@ -45,7 +47,7 @@ div {
 h2 {
   color: beige;
   font-family: 'Shantell Sans', cursive;
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 600;
   padding: 25px;
   text-align: center; 
