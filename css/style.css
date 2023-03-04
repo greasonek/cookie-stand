@@ -1,28 +1,44 @@
 
 header {
-  color:beige;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: olive;
+
+  background-color: salmon;
   font-family: 'Mynerve', cursive;
   font-size: 120px;
-  font-weight: 800;
-  padding: 50px;
+  font-weight: 600;
+  padding: 20px;
+
   text-align: center;
 }
 
 header h1 {
+  color:beige;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: olive;
   font-family: 'Mynerve', cursive;
-  font-size: 120px;
-  font-weight: 800;
+  font-size: 100px;
+  font-weight: 700;
+
   padding: 10px;
   text-align: center;
+}
+.sales-header {
+  color:beige;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: olive;
 }
 
 nav {
   font-family: 'Shantell Sans', cursive;
-  font-size: 50px;
+  font-size: 30px;
   font-weight:600;
   text-align:center;
+}
+
+li {
+  background-color: olive;
+  padding: 10px;
+  display: inline;
+  border: 2px solid beige
 }
 
 a {
@@ -31,11 +47,13 @@ a {
 }
 
 a:hover {
-  color: olive;
+  background-color: salmon;
+  color: beige;
+
 }
 
 body {
-  background-color: salmon;
+  background-color: beige;
 }
 
 div {
@@ -45,52 +63,71 @@ div {
 }
 
 h2 {
-  color: beige;
+  color: olive;
   font-family: 'Shantell Sans', cursive;
   font-size: 50px;
   font-weight: 600;
-  padding: 25px;
-  text-align: center; 
-}
-
-h3 {
-  color: beige;
-  font-family: 'Shantell Sans', cursive;
-  font-size: 45px;
-  font-weight: 600;
-  padding: 20px;
-  text-align: center;
-}
-
-h4 {
-  color: beige;
-  font-family: 'Shantell Sans', cursive;
-  font-size: 30px;
   padding: 15px;
   text-align: center; 
 }
-ul {
-  text-align: center;
-}
 
-li {
+.store-return {
+  color: olive;
+  font-family: 'Shantell Sans', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center; 
+}
+.store-return a {
+  background-color: salmon;
   color: beige;
-  /* display:inline-block; */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-  padding: 5px;
-  /* margin: 15px; */
-  text-align:center; 
+  border: 2px solid olive;
+  padding: 8px;
+}
+.store-return a:hover {
+  background-color: olive;
+  color: beige;
 }
 
 #intro {
-  color: beige;
+  color: olive;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 40px;
+  padding:20px;
+  margin:100px;
+  border: solid 5px olive;
+  text-align: center;
+}
+
+#about {
+  color: olive;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
   padding:5px;
   margin:100px;
-  border: solid 5px beige;
   text-align: center;
+  line-height: 50px;
+}
+
+.shirt-caption {
+  color: olive;
+  font-family: 'Shantell Sans', cursive;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.shirt-caption a {
+  background-color: salmon;
+  color: beige;
+  border: 2px solid olive;
+  padding: 8px;
+}
+.shirt-caption a:hover {
+  background-color: olive;
+  color: beige;
 }
 
 h6 {
@@ -99,6 +136,11 @@ h6 {
   font-size: 30px;
   padding: 15px;
   text-align: center;
+}
+
+.cookie-images {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 table {
@@ -116,9 +158,34 @@ th, td {
   border: 1px solid black;
 }
 footer {
+  background-color: salmon;
   color:beige;
+  text-align:left;
+  display: flex;
+}
+
+.footer-image {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hours {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size:15px;
-  padding:5px;
-  text-align:center;
+  font-size:30px;
+  color:olive;
+  line-height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content:center;
+}
+#locations {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:20px;
+  display: flex;
+  justify-content:flex-start;
+}
+.contact {
+  font-size: 30px;
+  /* display: flex;
+  justify-content: space-around; */
 }
