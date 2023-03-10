@@ -40,7 +40,7 @@ StoreLocation.prototype.custCount = function(){
 
 StoreLocation.prototype.cookieCount = function(){
   for (let i = 0; i < hours.length; i++){
-    let hourlyCookies = Math.ceil(this.custPerHour[i] * this.avgCookieSales);
+    let hourlyCookies = Math.ceil(this.custPerHour[i] * this.avgCookieSales + 1);
     this.cookiePerHour.push(hourlyCookies);
   }
 };
