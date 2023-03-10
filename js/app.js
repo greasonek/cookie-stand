@@ -40,7 +40,7 @@ StoreLocation.prototype.custCount = function(){
 
 StoreLocation.prototype.cookieCount = function(){
   for (let i = 0; i < hours.length; i++){
-    let hourlyCookies = Math.ceil(this.custPerHour[i] * this.avgCookieSales + 1);
+    let hourlyCookies = Math.ceil(this.custPerHour[i] * this.avgCookieSales);
     this.cookiePerHour.push(hourlyCookies);
   }
 };
@@ -151,9 +151,9 @@ function handleSubmit(event){
   event.preventDefault();
 
   let storeName = event.target.store.value;
-  let min = event.target.min.value;
-  let max = event.target.max.value;
-  let AvgCookieSales = event.target.AvgCookieSales.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let AvgCookieSales = +event.target.AvgCookieSales.value;
   console.log(storeName, min, max, AvgCookieSales);
 
   let addedStore = new StoreLocation(storeName, min, max, AvgCookieSales, [], []);

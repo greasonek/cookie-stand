@@ -6,7 +6,6 @@ header {
   font-size: 120px;
   font-weight: 600;
   padding: 20px;
-
   text-align: center;
 }
 
@@ -17,8 +16,7 @@ header h1 {
   font-family: 'Mynerve', cursive;
   font-size: 100px;
   font-weight: 700;
-
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 .sales-header {
@@ -26,7 +24,9 @@ header h1 {
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: olive;
 }
-
+#salmon {
+  height:150px;
+}
 nav {
   font-family: 'Shantell Sans', cursive;
   font-size: 30px;
@@ -110,6 +110,11 @@ h2 {
   line-height: 50px;
 }
 
+#chinook{
+  border: 5px solid sienna;
+  width:26%;
+  margin: 0 auto;
+}
 .shirt-caption {
   color: olive;
   font-family: 'Shantell Sans', cursive;
@@ -144,19 +149,21 @@ h6 {
 }
 
 table {
-  border: 2px solid black;
+  border: 2px solid olive;
   background-color: beige;
-  color:olive;
+  color:saddlebrown;
   table-layout: auto;
   text-align: center; 
   margin: 100px;
 }
 th {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 th, td {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 15px;
-  border: 1px solid black;
+  border: 1px solid olive;
 }
 
 form {
